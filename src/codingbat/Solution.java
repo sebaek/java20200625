@@ -42,4 +42,19 @@ public class Solution {
 		return a10 || b10 || sum10;
 	}
 
+	public boolean nearHundred(int n) {
+		boolean near100 = Math.abs(100 - n) <= 10;
+		boolean near200 = Math.abs(200 - n) <= 10;
+
+		return near100 || near200;
+	}
+
+	public boolean posNeg(int a, int b, boolean negative) {
+		if (negative) {
+			return a < 0 && b < 0;
+		} else {
+			return a * b < 0;
+		}
+	}
+
 }
