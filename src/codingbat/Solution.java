@@ -57,4 +57,36 @@ public class Solution {
 		}
 	}
 
+	public String notString(String str) {
+		if (str.startsWith("not")) {
+			return str;
+		} else {
+			return "not " + str;
+		}
+
+	}
+
+	public String missingChar(String str, int n) {
+		return str.substring(0, n) + str.substring(n + 1);
+	}
+
+	public String frontBack(String str) {
+		if (str.length() > 1) {
+			String first = str.substring(0, 1);
+			String last = str.substring(str.length() - 1);
+			String mid = str.substring(1, str.length() - 1);
+
+			return last + mid + first;
+		}
+
+		return str;
+	}
+
+	public String front3(String str) {
+		int len = (str.length() >= 3) ? 3 : str.length();
+
+		String front = str.substring(0, len);
+		return front + front + front;
+	}
+
 }
