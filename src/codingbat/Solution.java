@@ -131,4 +131,11 @@ public class Solution {
 		return teena || teenb || teenc;
 	}
 
+	public boolean loneTeen(int a, int b) {
+		boolean teena = 13 <= a && a <= 19;
+		boolean teenb = 13 <= b && b <= 19;
+
+		return teena ^ teenb;
+	}
+
 }
