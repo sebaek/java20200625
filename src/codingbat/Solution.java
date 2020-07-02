@@ -89,4 +89,46 @@ public class Solution {
 		return front + front + front;
 	}
 
+	public String backAround(String str) {
+		char last = str.charAt(str.length() - 1);
+		return last + str + last;
+	}
+
+	public boolean or35(int n) {
+		return (n % 3) == 0 || (n % 5) == 0;
+	}
+
+	public String front22(String str) {
+		int len = str.length() < 2 ? str.length() : 2;
+
+		String front = str.substring(0, len);
+		return front + str + front;
+	}
+
+	public boolean startHi(String str) {
+		return str.startsWith("hi");
+	}
+
+	public boolean icyHot(int temp1, int temp2) {
+		boolean t1 = temp1 < 0 && temp2 > 100;
+		boolean t2 = temp1 > 100 && temp2 < 0;
+
+		return t1 || t2;
+	}
+
+	public boolean in1020(int a, int b) {
+		boolean ia = 10 <= a && a <= 20;
+		boolean ib = 10 <= b && b <= 20;
+
+		return ia || ib;
+	}
+
+	public boolean hasTeen(int a, int b, int c) {
+		boolean teena = 13 <= a && a <= 19;
+		boolean teenb = 13 <= b && b <= 19;
+		boolean teenc = 13 <= c && c <= 19;
+
+		return teena || teenb || teenc;
+	}
+
 }
