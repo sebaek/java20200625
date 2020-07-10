@@ -5,7 +5,7 @@ public class Main {
 		Cat cat1 = new Cat();
 		cat1.cry();
 		KindaCat kc1;
-		kc1 = new KindaCat();
+//		kc1 = new KindaCat();
 		kc1 = cat1;
 		System.out.println(kc1 == cat1);
 		kc1.cry();
@@ -17,6 +17,9 @@ public class Main {
 		KindaCat kc2 = tig1;
 		kc2.cry();
 //		kc2.hunt();
+		
+		Tiger tig2 = (Tiger) kc2;
+		Cat cat3 = (Cat) kc2;
 	}
 	
 	private static void printCry(KindaCat c) {
