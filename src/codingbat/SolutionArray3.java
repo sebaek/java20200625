@@ -141,4 +141,16 @@ public class SolutionArray3 {
 
 	}
 
+	public int[] squareUp(int n) {
+		int[] res = new int[n * n];
+
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= i; j++) {
+				res[n * i - j] = j;
+			}
+		}
+
+		return res;
+	}
+
 }
