@@ -113,4 +113,32 @@ public class SolutionArray3 {
 		return false;
 	}
 
+	public boolean linearIn(int[] outer, int[] inner) {
+		int outerCur = 0;
+		int innerCur = 0;
+
+		//
+
+		while (innerCur < inner.length && outerCur < outer.length) {
+			int outerNum = outer[outerCur];
+			int innerNum = inner[innerCur];
+
+			if (outerNum == innerNum) {
+				outerCur++;
+				innerCur++;
+			} else if (outerNum < innerNum) {
+				outerCur++;
+			} else {
+				return false;
+			}
+		}
+
+		if (innerCur >= inner.length) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
 }
