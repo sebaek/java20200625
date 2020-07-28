@@ -41,4 +41,84 @@ public class SolutionArray2 {
 		return avg;
 	}
 
+	public int sum13(int[] nums) {
+		int sum = 0;
+		boolean is13 = false;
+
+		for (int num : nums) {
+			if (num != 13) {
+				if (is13) {
+					is13 = false;
+				} else {
+					sum += num;
+				}
+
+			} else {
+				is13 = true;
+			}
+
+		}
+
+		return sum;
+	}
+
+	public int sum67(int[] nums) {
+		int sum = 0;
+		boolean has6 = false;
+
+		for (int num : nums) {
+			if (num == 6) {
+				has6 = true;
+			}
+
+			if (has6) {
+				if (num == 7) {
+					has6 = false;
+					continue;
+				}
+			}
+
+			if (!has6) {
+				sum += num;
+			}
+
+		}
+
+		return sum;
+	}
+
+	public boolean has22(int[] nums) {
+		boolean is2 = false;
+
+		for (int num : nums) {
+			if (!is2 && num == 2) {
+				is2 = true;
+				continue;
+			}
+
+			if (is2) {
+				if (num == 2) {
+					return true;
+				} else {
+					is2 = false;
+				}
+			}
+
+		}
+
+		return false;
+	}
+
+	public boolean sum28(int[] nums) {
+		int sum = 0;
+
+		for (int num : nums) {
+			if (num == 2) {
+				sum += num;
+			}
+		}
+
+		return sum == 8;
+	}
+
 }
