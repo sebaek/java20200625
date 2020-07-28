@@ -25,4 +25,20 @@ public class SolutionArray2 {
 		return max - min;
 	}
 
+	public int centeredAverage(int[] nums) {
+		int max = nums[0];
+		int min = nums[0];
+		int sum = 0;
+		int length = nums.length;
+
+		for (int num : nums) {
+			sum += num;
+			min = Math.min(min, num);
+			max = Math.max(max, num);
+		}
+
+		int avg = (sum - max - min) / (length - 2);
+		return avg;
+	}
+
 }
