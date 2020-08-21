@@ -121,4 +121,52 @@ public class SolutionArray2 {
 		return sum == 8;
 	}
 
+	public boolean more14(int[] nums) {
+		int num1 = 0;
+		int num4 = 0;
+
+		for (int n : nums) {
+			if (n == 1) {
+				num1++;
+			}
+
+			if (n == 4) {
+				num4++;
+			}
+		}
+
+		return num1 > num4;
+	}
+
+	public int[] fizzArray(int n) {
+		int[] res = new int[n];
+
+		for (int i = 0; i < n; i++) {
+			res[i] = i;
+		}
+
+		return res;
+	}
+
+	public boolean only14(int[] nums) {
+		for (int n : nums) {
+			if (n != 1 && n != 4) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	public String[] fizzArray2(int n) {
+		String[] res = new String[n];
+
+		for (int i = 0; i < n; i++) {
+			res[i] = "" + i;
+		}
+
+		return res;
+
+	}
+
 }
